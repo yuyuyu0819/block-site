@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "URL Blocker",
+    "version": "1.0",
+    "description": "Blocks websites containing specified strings in their URL.",
+    "permissions": [
+      "declarativeNetRequest",
+      "storage",
+      "activeTab",
+      "webNavigation"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    },
+    "options_page": "options.html"
+  }
+  
